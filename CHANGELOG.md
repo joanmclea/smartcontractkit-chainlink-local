@@ -46,7 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Bug in propose & confirm aggregator flow that could lead to aggregator being set to `address(0)`
 - The `maxAnswer` variable in the `MockOffchainAggregator.sol` contract was set to an incorrect value
-- Bug in the `MockOffchainAggregator.sol` contract where the `minAnswer` could've been set to the value greather than `maxAnswer`
+- Bug in the `MockOffchainAggregator.sol` contract where the `minAnswer` could've been set to the value greater than `maxAnswer`
 
 ## [0.2.0-beta] - 24 June 2024
 

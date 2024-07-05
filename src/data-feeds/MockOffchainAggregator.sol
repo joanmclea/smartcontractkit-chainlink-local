@@ -17,7 +17,7 @@ contract MockOffchainAggregator {
     // Not exposed from the Proxy contract
     int192 public maxAnswer;
 
-    mapping(uint256 => int256) public getAnswer;
+    mapping(uint256 => int256) public getAnswer; // gets answer for round
     mapping(uint256 => uint256) public getTimestamp;
     mapping(uint256 => uint256) private getStartedAt;
 
