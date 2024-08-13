@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: UNLICENSED
+
 // Submitted for verification at Etherscan.io on 2017-12-12
 
 // Copyright (C) 2015, 2016, 2017 Dapphub
@@ -63,16 +65,10 @@ contract WETH9 {
         return transferFrom(msg.sender, dst, wad);
     }
 
-    function transferFrom(
-        address src,
-        address dst,
-        uint256 wad
-    ) public returns (bool) {
+    function transferFrom(address src, address dst, uint256 wad) public returns (bool) {
         require(balanceOf[src] >= wad);
 
-        if (
-            src != msg.sender && allowance[src][msg.sender] != type(uint128).max
-        ) {
+        if (src != msg.sender && allowance[src][msg.sender] != type(uint128).max) {
             require(allowance[src][msg.sender] >= wad);
             allowance[src][msg.sender] -= wad;
         }
